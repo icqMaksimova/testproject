@@ -1,0 +1,521 @@
+@import 'fonts.sass'
+@import 'base.sass'
+
+html,body
+	margin: 0
+	padding: 0
+	font-family: 'Roboto'
+	font-weight: 400
+	font-size: 1.367vw
+	line-height: 1.2
+	@media screen and (min-width: $max)
+		font-size: 16px
+input,textarea,button,select
+	outline: none
+	font-family: 'Roboto'
+	font-weight: 400
+div
+	box-sizing: border-box
+button
+	cursor: pointer
+a
+	cursor: pointer
+	text-decoration: none
+	color: inherit
+
+.wrap
+	min-width: 320px
+.header
+	text-align: center
+	border-bottom: 1px solid $linecolor
+	position: relative
+	padding: 0 20px
+	box-sizing: border-box
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	&__in
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 6.838vw
+		position: relative
+		@media screen and (min-width: $max)
+			height: 70px
+	&__menu
+		list-style-type: none
+		margin: 0
+		padding: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 1.197vw
+		line-height: 1
+		font-weight: 300
+		color: $blue
+		box-sizing: border-box
+		@media screen and (min-width: $max)
+			font-size: 14px
+		@media screen and (max-width: $mobile)
+			position: fixed
+			z-index: 100
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			overflow-y: auto
+			background: #fff
+			flex-direction: column
+			display: none
+			font-size: 14px
+			&.open
+				display: flex
+		li
+			margin: 0 3.205vw
+			@media screen and (min-width: $max)
+				margin: 0 37px
+			@media screen and (max-width: $mobile)
+				margin: 15px 0
+			a:hover
+				color: $darkgrey
+	&__mobilemenu
+		display: none
+		@media screen and (max-width: $mobile)
+			display: block
+		span
+			display: block
+			width: 30px
+			height: 3px
+			background: $grey
+			margin: 3px 0
+			@media screen and (max-width: 480px)
+				width: 20px
+				height: 2px
+				margin: 2px 0
+.top
+	text-align: center
+	padding: 10.1vw 0 5.5vw
+	background: url(../img/top.jpg) top center no-repeat
+	background-size: 100% auto
+	position: relative
+	@media screen and (min-width: $max)
+		padding: 118px 0 64px
+	&__title
+		font-size: 5.979vw
+		line-height: 1
+		font-weight: 100
+		position: relative
+		z-index: 10
+		@media screen and (min-width: $max)
+			font-size: 70px
+	&::before
+		content: ''
+		position: absolute
+		z-index: 0
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		background: -moz-linear-gradient(top,  rgba(255,255,255,0) 28%, rgba(255,255,255,0.7) 48%, rgba(255,255,255,1) 63%, rgba(255,255,255,1) 100%)
+		background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 28%,rgba(255,255,255,0.7) 48%,rgba(255,255,255,1) 63%,rgba(255,255,255,1) 100%)
+		background: linear-gradient(to bottom,  rgba(255,255,255,0) 28%,rgba(255,255,255,0.7) 48%,rgba(255,255,255,1) 63%,rgba(255,255,255,1) 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 )
+.button
+	color: #fff
+	background-color: $blue
+	border: none
+	box-sizing: border-box
+	font-size: 1.367vw
+	line-height: 1
+	padding: 1.382vw 2.82vw 1.453vw
+	border-radius: 0.8vw
+	cursor: pointer
+	@media screen and (min-width: $max)
+		font-size: 16px
+		padding: 16.2px 33px 17px
+.checkbox
+	display: block
+	position: relative
+	padding-left: 2.904vw
+	margin-bottom: 1.453vw
+	cursor: pointer
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+	line-height: 1.709vw
+	@media screen and (min-width: $max)
+		padding-left: 34px
+		margin-bottom: 17px
+		line-height: 20px
+	input
+		position: absolute
+		opacity: 0
+		cursor: pointer
+		height: 0
+		width: 0
+	&__mark
+		position: absolute
+		top: 0
+		left: 0
+		height: 1.709vw
+		width: 1.709vw
+		background-color: #ffffff
+		border: 1px solid $blue
+		border-radius: 0.2vw
+		@media screen and (min-width: $max)
+			height: 20px
+			width: 20px
+			border-radius: 3px
+		&:after
+			content: ""
+			position: absolute
+			display: none
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			background: url(../img/check.svg) center no-repeat
+			background-size: 1.111vw auto
+			@media screen and (min-width: $max)
+				background-size: 13px auto
+	&:hover input ~ .checkbox__mark
+		background-color: #e9efff
+	input:checked ~ .checkbox__mark
+		background-color: $blue
+		&:after
+			display: block
+.block
+	text-align: center
+	margin-bottom: 6.325vw
+	@media screen and (min-width: $max)
+		margin-bottom: 74px
+	&_exp
+		margin-bottom: 8.812vw
+		@media screen and (min-width: $max)
+			margin-bottom: 103px
+	&_js
+		overflow: hidden
+	&__icon
+		img
+			width: 4.017vw
+			@media screen and (min-width: $max)
+				width: 47px
+	&__title
+		font-size: 2.562vw
+		line-height: 1
+		font-weight: 300
+		margin-top: 1.966vw
+		@media screen and (min-width: $max)
+			font-size: 30px
+			margin-top: 23px
+	&__text
+		line-height: 1.5
+		font-weight: 300
+		margin-top: 1.11vw
+		@media screen and (min-width: $max)
+			margin-top: 13px
+		& + .block__content
+			margin-top: 3.077vw
+			@media screen and (min-width: $max)
+				margin-top: 36px
+	&__content
+		margin-top: 3.846vw
+		@media screen and (min-width: $max)
+			margin-top: 45px
+	&__field
+		margin-bottom: 2.137vw
+		@media screen and (min-width: $max)
+			margin-bottom: 25px
+		input,textarea
+			height: 5.128vw
+			box-shadow: none
+			text-align: center
+			border: 1px solid $grey
+			border-radius: 0.4vw
+			font-size: 2.05vw
+			color: #000
+			@media screen and (min-width: $max)
+				height: 60px
+				font-size: 24px
+				border-radius: 5px
+		input
+			width: 44.444vw
+			@media screen and (min-width: $max)
+				width: 520px
+		input,textarea
+			&::-webkit-input-placeholder
+				color: $grey2
+			&:-ms-input-placeholder
+				color: $grey2
+			&::-ms-input-placeholder
+				color: $grey2
+			&::placeholder
+				color: $grey2
+		textarea
+			width: 44.53vw
+			height: 15.47vw
+			font-size: 1.709vw
+			text-align: left
+			box-sizing: border-box
+			padding: 1.5vw 1.88vw
+			resize: none
+			@media screen and (min-width: $max)
+				width: 520px
+				height: 181px
+				font-size: 20px
+				padding: 18px 22px
+	&__range
+		display: inline-block
+		width: 65.82vw
+		padding-bottom: 2.56vw
+		@media screen and (min-width: $max)
+			width: 768px
+			padding-bottom: 30px
+		&labels
+			font-size: 1.11vw
+			line-height: 1.46
+			font-weight: 300
+			display: flex
+			align-items: flex-end
+			width: 100%
+			margin-bottom: 1.282vw
+			position: relative
+			z-index: 10
+			@media screen and (min-width: $max)
+				font-size: 13px
+				margin-bottom: 15px
+		&label
+			text-align: left
+			width: 25%
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				left: 0
+				top: 100%
+				margin-top: 0.35vw
+				height: 2.137vw
+				width: 0.085vw
+				background: #fff
+				@media screen and (min-width: $max)
+					height: 25px
+					margin-top: 4px
+					width: 1px
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				top: 100%
+				margin-top: 0.5vw
+				border-left: 1px dotted #b0b0b0
+				height: 2vw
+				z-index: 10
+				@media screen and (min-width: $max)
+					margin-top: 6px
+					height: 15px
+			&_1
+				&::after
+					height: 13px
+			&_2
+				&::after
+					height: 11px
+			&_3
+				&::after
+					height: 9px
+			&_4
+				&::after
+					height: 5px
+			&:first-child
+				&::before,&::after
+					background: none
+			&:last-child
+				flex: 1
+				text-align: right
+				&::before,&::after
+					left: auto
+					right: 0
+					background: none
+	&__button
+		margin-top: 3.846vw
+		@media screen and (min-width: $max)
+			margin-top: 45px
+	&__checkboxes
+		-webkit-column-count: 3
+		-moz-column-count: 3
+		column-count: 3
+		-webkit-column-width: 17.949vw
+		-moz-column-width: 17.949vw
+		column-width: 17.949vw
+		-webkit-column-gap: 5.983vw
+		-moz-column-gap: 5.983vw
+		column-gap: 5.983vw
+		display: inline-block
+		width: 65.82vw
+		text-align: left
+		@media screen and (min-width: $max)
+			-webkit-column-width: 209px
+			-moz-column-width: 209px
+			column-width: 209px
+			-webkit-column-gap: 70px
+			-moz-column-gap: 70px
+			column-gap: 70px
+			width: 768px
+.styledselect
+	position: relative
+	width: 27.35vw
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	height: 5.128vw
+	box-shadow: none
+	text-align: center
+	border: 1px solid $grey
+	border-radius: 0.4vw
+	font-size: 2.05vw
+	color: #000
+	padding: 0 3.419vw
+	box-sizing: border-box
+	cursor: pointer
+	color: $grey2
+	@media screen and (min-width: $max)
+		width: 320px
+		height: 60px
+		border-radius: 5px
+		font-size: 24px
+		padding: 0 40px
+	select
+		display: none
+	&.selected
+		color: #000
+	&::after
+		content: ''
+		position: absolute
+		width: 1.197vw
+		height: 0.684vw
+		left: 89.69%
+		top: calc(50% - 0.342vw)
+		background: url(../img/select.svg) 89.69% center no-repeat
+		background-size: contain
+		-webkit-transition: all 0.2s
+		transition: all 0.2s
+		@media screen and (min-width: $max)
+			width: 14px
+			height: 8px
+			top: calc(50% - 4px)
+	&__options
+		display: none
+		position: absolute
+		width: 100%
+		height: 25.726vw
+		left: 0
+		top: 100%
+		margin-top: 0.2vw
+		text-align: center
+		font-size: 1.709vw
+		line-height: 1.8
+		color: $blue
+		box-sizing: border-box
+		background: #fff
+		border-radius: 0.4vw
+		box-shadow: 0px 0.256vw 0.684vw 0px rgba(0, 0, 0, 0.2)
+		@media screen and (min-width: $max)
+			height: 301px
+			margin-top: 3px
+			font-size: 1.709vw
+			border-radius: 5px
+			box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2)
+	&__option:hover,&__option.active
+		background-color: $grey
+	&.open
+		&::after
+			transform: rotate(180deg)
+		.styledselect__options
+			display: block
+
+.ui-slider-handle
+	outline: none
+	border: none !important
+	background: url(../img/handle.svg) center no-repeat !important
+	background-size: contain !important
+	cursor: pointer !important
+	width: 1.966vw !important
+	height: 2.22vw !important
+	top: 100% !important
+	margin-top: 0.34vw
+	z-index: 20 !important
+	@media screen and (min-width: $max)
+		width: 23px !important
+		height: 26px !important
+		margin-top: 4px
+.ui-widget.ui-widget-content
+	border: none
+	position: relative
+	background: $grey2
+	border-radius: 0 !important
+	z-index: 0
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		border: 65.65vw solid transparent
+		border-left: 0
+		border-top: 0.769vw solid #fff
+		z-index: 10
+		@media screen and (min-width: $max)
+			border: 768px solid transparent
+			border-left: 0
+			border-top: 9px solid #fff
+
+.ui-slider .ui-slider-range
+	border-radius: 0 !important
+	overflow: hidden
+	&::before
+		content: ''
+		width: 65.65vw
+		height: 100%
+		position: absolute
+		z-index: 0
+		left: 0
+		top: 0
+		background: rgb(204,177,241); /* Old browsers */
+		background: -moz-linear-gradient(left,  rgba(204,177,241,1) 0%, rgba(67,89,147,1) 100%)
+		background: -webkit-linear-gradient(left,  rgba(204,177,241,1) 0%,rgba(67,89,147,1) 100%)
+		background: linear-gradient(to right,  rgba(204,177,241,1) 0%,rgba(67,89,147,1) 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccb1f1', endColorstr='#435993',GradientType=1 )
+		@media screen and (min-width: $max)
+			width: 768px
+	&::after
+		content: ''
+		position: absolute
+		z-index: 10
+		height: 100%
+		top: 0
+		left: 100%
+		width: 40vw
+		background: $grey2
+
+.scrollable
+	overflow-y: hidden
+	height: 100%
+.mCSB_inside
+	padding: 2.137vw 0
+	box-sizing: content-box
+	@media screen and (min-width: $max)
+		padding: 25px 0
+.mCSB_1_scrollbar
+	top: 1.025vw
+	@media screen and (min-width: $max)
+		top: 12px
+.mCSB_scrollTools
+	height: 23.676vw
+	@media screen and (min-width: $max)
+		height: 277px
+.mCSB_draggerRail
+	background: none!important
+.mCSB_dragger_bar
+	background-color: #d9d9d9!important
+.mCSB_inside > .mCSB_container
+	margin-right: 0
