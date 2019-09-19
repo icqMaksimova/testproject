@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="header__in">
+        <ul class="header__menu">
+          <li><a href="#info">Личная информация</a></li>
+          <li><a href="#experience">Опыт</a></li>
+          <li><a href="#js">Javascript</a></li>
+          <li><a href="#about">О себе</a></li>
+        </ul>
+      </div>
+      <div class="header__mobilemenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+    <div class="top">
+      <div class="top__title">
+        Анкета
+      </div>
+    </div>
+    <form class="" action="">
+      <div class="block" id="info">
+        <div class="block__icon">
+          <img src="img/icon1.svg">
+        </div>
+        <div class="block__title">
+          Личная информация
+        </div>
+        <div class="block__content">
+          <div class="block__field">
+            <input type="text" name="name" value="" placeholder="ФИО">
+          </div>
+          <div class="block__field">
+            <div class="block__select styledselect">
+              <div class="styledselect__val">
+                Год рождения
+              </div>
+              <div class="styledselect__options">
+                <div class="scrollable"></div>
+              </div>
+              <select class="yearoptions" name="year"></select>
+            </div>
+          </div>
+          <div class="block__field">
+            <input type="text" name="place" value="" placeholder="Место проживания">
+          </div>
+          <div class="block__field">
+            <input type="text" name="skype" value="" placeholder="Skype">
+          </div>
+          <div class="block__field">
+            <input type="text" name="mail" value="" placeholder="E-mail">
+          </div>
+        </div>
+      </div>
+      <div class="block block_exp" id="experience">
+        <div class="block__icon">
+          <img src="img/icon2.svg">
+        </div>
+        <div class="block__title">
+          Расскажите о своем опыте
+        </div>
+        <div class="block__content">
+          <div class="block__checkboxes">
+            <label class="checkbox">БЭМ/OOCSS
+              <input type="checkbox" name="checkbox1" value="1">
+              <span class="checkbox__mark"></span>
+            </label>
+            <label class="checkbox">Верстаю семантично
+              <input type="checkbox" name="checkbox2" value="1">
+              <span class="checkbox__mark"></span>
+            </label>
+            <label class="checkbox">Webpack
+              <input type="checkbox" name="checkbox3" value="1">
+              <span class="checkbox__mark"></span>
+            </label>
+            <label class="checkbox">Stylus/LESS/SASS
+              <input type="checkbox" name="checkbox4" value="1">
+              <span class="checkbox__mark"></span>
+            </label>
+            <label class="checkbox">ES2015/ES2016
+              <input type="checkbox" name="checkbox5" value="1">
+              <span class="checkbox__mark"></span>
+            </label>
+            <label class="checkbox">jQuery
+              <input type="checkbox" name="checkbox6" value="1">
+              <span class="checkbox__mark"></span>
+            </label>
+            <label class="checkbox">Работаю с SVG
+              <input type="checkbox" name="checkbox7" value="1">
+              <span class="checkbox__mark"></span>
+            </label>
+            <label class="checkbox">Gulp/GRUNT
+              <input type="checkbox" name="checkbox8" value="1">
+              <span class="checkbox__mark"></span>
+            </label>
+            <label class="checkbox">Ипользую Git
+              <input type="checkbox" name="checkbox9" value="1">
+              <span class="checkbox__mark"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="block block_js" id="js">
+        <div class="block__icon">
+          <img src="img/icon3.svg">
+        </div>
+        <div class="block__title">
+          Уровень владения JavaScript
+        </div>
+        <div class="block__content">
+          <div class="block__range">
+            <div class="block__rangelabels">
+              <div class="block__rangelabel block__rangelabel_1">
+                Не владею
+              </div>
+              <div class="block__rangelabel block__rangelabel_2">
+                Использую готовые<br>
+                решения
+              </div>
+              <div class="block__rangelabel block__rangelabel_3">
+                Использую готовые решения<br>
+                и умею переделывать
+              </div>
+              <div class="block__rangelabel block__rangelabel_4">
+                Пишу сложный JS с нуля
+              </div>
+            </div>
+            <div class="" id="range" data-value="50"></div>
+          </div>
+        </div>
+      </div>
+      <div class="block" id="about">
+        <div class="block__icon">
+          <img src="img/icon4.svg">
+        </div>
+        <div class="block__title">
+          Расскажите о себе
+        </div>
+        <div class="block__text">
+          Напишите несколько предложений, чем привлекла наша вакансия<br>
+          и что вы ожидаете от работы у нас.
+        </div>
+        <div class="block__content">
+          <div class="block__field">
+            <textarea name="name" placeholder="Понравилась тем, что..."></textarea>
+          </div>
+        </div>
+        <button type="submit" name="button" class="button block__button">Готово</button>
+      </div>
+    </form>
+  </div>
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
