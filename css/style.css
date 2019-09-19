@@ -145,7 +145,7 @@ a {
     position: absolute;
     z-index: 0;
     width: 100%;
-    height: 100%;
+    height: 102%;
     left: 0;
     top: 0;
     background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 28%, rgba(255, 255, 255, 0.7) 48%, white 63%, white 100%);
@@ -162,7 +162,11 @@ a {
   line-height: 1;
   padding: 1.382vw 2.82vw 1.453vw;
   border-radius: 0.8vw;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+  .button:hover {
+    background-color: #1c1c1c; }
   @media screen and (min-width: 1170px) {
     .button {
       font-size: 16px;
@@ -226,7 +230,9 @@ a {
 
 .block {
   text-align: center;
-  margin-bottom: 6.325vw; }
+  margin-bottom: 6.325vw;
+  position: relative;
+  z-index: 1; }
   @media screen and (min-width: 1170px) {
     .block {
       margin-bottom: 74px; } }
@@ -367,13 +373,25 @@ a {
             margin-top: 6px;
             height: 15px; } }
       .block__rangelabel_1::after {
-        height: 13px; }
+        height: 1.11vw; }
+        @media screen and (min-width: 1170px) {
+          .block__rangelabel_1::after {
+            height: 13px; } }
       .block__rangelabel_2::after {
-        height: 11px; }
+        height: 0.94vw; }
+        @media screen and (min-width: 1170px) {
+          .block__rangelabel_2::after {
+            height: 11px; } }
       .block__rangelabel_3::after {
-        height: 9px; }
+        height: 0.769vw; }
+        @media screen and (min-width: 1170px) {
+          .block__rangelabel_3::after {
+            height: 9px; } }
       .block__rangelabel_4::after {
-        height: 5px; }
+        height: 0.427vw; }
+        @media screen and (min-width: 1170px) {
+          .block__rangelabel_4::after {
+            height: 5px; } }
       .block__rangelabel:first-child::before, .block__rangelabel:first-child::after {
         background: none; }
       .block__rangelabel:last-child {
